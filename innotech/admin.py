@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Product, About, Slider, Media
+from .models import Product, About, Slider, Media, Team
 
 
 class AboutAdmin(admin.ModelAdmin):
@@ -32,3 +32,8 @@ admin.site.register(Slider, SliderAdmin)
 @admin.register(Media)
 class MediaAdmin(admin.ModelAdmin):
     list_display = ['title']
+
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
+    list_display = ['job_title']

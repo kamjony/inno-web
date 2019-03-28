@@ -24,3 +24,8 @@ class Media(models.Model):
     title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
     summary =models.TextField(max_length=50)
+
+class Team(models.Model):
+    name = models.CharField(max_length=100)
+    job_title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='images/')
